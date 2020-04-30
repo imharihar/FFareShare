@@ -1,0 +1,157 @@
+{% extends 'home/base.html'%}
+{% load static %}
+<!--content of index html-->
+{% block content %}
+<!--css styling-->
+<style>
+.img-fluid{
+    margin-left:50%;
+    width:40%;
+    height:60%;
+}
+
+.mascot-content{
+    background-color: #130543;
+}
+
+.intro-content-1{
+    font-family:sans-serif;
+    color: white;
+    font-size: 200%;
+    font-weight:bold;
+    position:absolute;
+    margin-left:10%;
+    top:20%;
+}
+
+.intro-content-2{
+    font-family:sans-serif;
+    color: white;
+    font-size: 200%;
+    font-weight:bold;
+    position:absolute;
+    margin-left:10%;
+    top:24%;
+}
+
+
+.signupD{
+  font-family: 'Fredoka One', cursive;
+    background-color: #00BDC1;
+    opacity:1;
+    padding:5px 40px;
+    border:none;
+    color: white;
+    position:absolute;
+    margin-left:10%;
+    top:35%;
+    border-radius: 10px;
+    }
+
+.features{
+    font-family: 'Fredoka One', cursive;
+    background-color: #130543;
+    font-size:250%;
+    margin-left:42%;
+    padding:5px 40px;
+    border:none;
+    color: white;
+    border-radius:15px;
+}
+
+.feature-content .f1{
+    border-radius:5px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    font-size:120%;
+    padding: 9px 30px;
+    background-color:#00BDC1;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+
+}
+
+.f3{
+    border-radius:5px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    font-size:120%;
+    padding: 9px 30px;
+    background-color:#00BDC1;
+    position: absolute;
+    top: 85%;
+    left: 10%;
+
+}
+
+.f5{
+    border-radius:5px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    font-size:120%;
+    padding: 9px 30px;
+    background-color:#00BDC1;
+    position: absolute;
+    top: 85%;
+    right: 15%;
+
+}
+
+.f4{
+    border-radius:5px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    font-size:120%;
+    padding: 9px 30px;
+    background-color:#00BDC1;
+    position: absolute;
+    top: 75%;
+    right: 10%;
+
+}
+
+.f2{
+    border-radius:5px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    font-size:120%;
+    padding: 9px 30px;
+    background-color:#00BDC1;
+    position: absolute;
+    top: 85%;
+    right: 42.5%;
+
+}
+
+
+</style>
+
+
+<!--html section-->
+<div class="mascot-content">
+    <p class="intro-content-1">Here, we help you to keep track and</p>
+    <p class="intro-content-2">share your expenses.</p>
+    <span><a class="signupD" href="{% url 'signup' %}">SIGN UP</a></span>    
+    <img src="{% static 'images/Mascot.png' %}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" 
+    alt="Mascot">
+
+</div>
+
+<div class="feature-content">
+    <button class="features">Features</button>
+    <span class="f1">Track Balance</span>
+    <span class="f2">Organize Balance</span>
+    <span class="f3">Add Expense</span>
+    <span class="f4">Pay friends back</span>
+    <span class="f5">Statistic</span>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+<!--end of content of index html-->

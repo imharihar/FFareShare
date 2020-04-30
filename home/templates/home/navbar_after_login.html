@@ -1,0 +1,72 @@
+{% load static %}
+<!-- Image and text -->
+<!--- <style>
+.loginC{
+    font-family: 'Fredoka One', cursive;
+    background-color: #666666;
+    opacity:0.7;
+    padding:5px 5px;
+    border:none;
+    color: white;
+    float:right;
+    margin-left:70%;
+}
+
+.signupC{
+    font-family: 'Fredoka One', cursive;
+    background-color: #00BDC1;
+    opacity:0.7;
+    padding:8px 40px;
+    border:none;
+    color: white;
+    }
+
+label{
+  margin-top:5%;
+}
+</style>
+
+
+
+
+<nav class="navbar navbar-dark primary-color">
+  <a class="navbar-brand" href="{% url 'home' %}" style="color: black; font-family: 'Fredoka One', cursive; padding-top: 0px;">
+    <img src="{% static 'images/logo.png' %}" height="40" class="d-inline-block align-top" alt="mdb logo"><label> FFareshare</lable>
+  </a>
+  <span class="loginC">Hello, {{request.user}}</span>
+  <span><a class="signupC" href="{% url 'logout' %}">Logout</a></span>
+</nav>
+<hr>
+-->
+
+
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <img src="{% static 'images/logo.png' %}" height="40" class="d-inline-block align-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      {% if request.user.is_staff %}
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'products' %}">Products</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <span class="hello-msg">Hello, {{request.user}}</span>
+  <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+
+</nav>

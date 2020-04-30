@@ -1,0 +1,19 @@
+{% extends 'home/base_after_login.html'%} 
+
+{% load static %}   
+
+
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for form in formset %}
+    {{ formset.management_form }}
+    {{form}}
+    <hr>
+    {% endfor %}
+    <input type="submit" name="Submit">
+</form>
+
+{% endblock %}
